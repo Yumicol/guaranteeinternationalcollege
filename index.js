@@ -10,3 +10,8 @@ app.set('views', path.join(__dirname, '/views'))
 app.get('/', (req, res) => {
     res.send('home');
 })
+
+
+app.listen(80, () => {
+    console.log("LISTENING ON PORT 3000");
+})
