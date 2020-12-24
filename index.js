@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send('home');
 })
 
-
-app.listen(80, () => {
-    console.log("LISTENING ON PORT 80");
+var port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`LISTENING ON PORT ${port}`);
 })
