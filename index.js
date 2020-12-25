@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-var port = process.env.PORT || 3000;
-
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('view engine', 'ejs');
@@ -13,6 +11,13 @@ app.get('/', (req, res) => {
     res.render('home');
 })
 
+
+
+app.use((req, res) => {
+    res.send('The requested page is not found');
+})
+
+var port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`LISTENING ON PORT ${port}`);
 })
