@@ -6,3 +6,18 @@
 body{
     font-family: "Source Sans Pro";
 }
+.navbar{
+    opacity: 95%;
+    z-index: 2;
+}
+
+/* Home */
+.carousel{
+    padding-top: 71px;
+}
+.carousel-item{
+    height: 65vh;
+}
+.space{
+    height: 1000px;
+}
